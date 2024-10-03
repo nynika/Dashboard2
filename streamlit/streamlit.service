@@ -1,0 +1,12 @@
+[Unit]
+Description=Streamlit App
+After=network.target
+
+[Service]
+User=your_username
+WorkingDirectory=/path/to/your/app
+ExecStart=/usr/local/bin/streamlit run your_app.py --server.port 8501
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
